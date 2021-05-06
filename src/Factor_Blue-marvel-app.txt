@@ -20,4 +20,6 @@ App.js and SearchBar.js in which case App.js is a perent component for a SearchB
 
 Every comic card is a link to a comic web page.
 
+Live verzion you can check at this link  https://dreamy-engelbart-82ac1a.netlify.app/
+
 Best regards,
