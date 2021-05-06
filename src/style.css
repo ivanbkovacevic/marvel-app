@@ -61,7 +61,7 @@ body {
       -ms-flex-align: start;
           align-items: flex-start;
   height: 2000px;
-  padding: 0 100px;
+  padding: 0 250px;
   overflow: scroll;
 }
 
