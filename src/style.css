@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  background-color: white;
+}
+
+/* 
+////////////////PRE SET/////////////////////////// */
+.wraper {
+  width: 100vw;
+  background: #b8cb7b;
+}
+
+.wraper .img-thumbnail {
+  width: 100px;
+}
+
+.wraper .img-header-container {
+  width: 100%;
+  height: 300px;
+  background-image: url("./marvel-universe.jpg");
+  background-size: cover;
+  background-position: center;
+  -webkit-filter: brightness(70%);
+          filter: brightness(70%);
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
+}
+
+.wraper .main-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  height: 2000px;
+  padding-left: 100px;
+  overflow: scroll;
+}
+
+.wraper .main-container .search-bar-container {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  background-color: #553739;
+  color: #d6efff;
+  width: 80%;
+  padding: 40px;
+}
+
+.wraper .main-container .search-bar-container label {
+  margin: 0 2px;
+  font-size: 2rem;
+}
+
+.wraper .main-container .search-bar-container input {
+  margin: 0 10px;
+  text-align: center;
+  width: 150px;
+}
+
+.wraper .main-container .search-bar-container button {
+  margin-left: 30px;
+  border: none;
+  background: #b8cb7b;
+  padding: 10px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  color: #243E36;
+}
+
+.wraper .main-container .search-bar-container button:hover {
+  color: #d6efff;
+  background: #553739;
+  outline: 1px solid #b8cb7b;
+}
+
+.wraper .main-container .loader {
+  font-size: 5rem;
+}
+
+.wraper .main-container .list-container {
+  padding: 50px;
+}
+
+.wraper .main-container .list-container .single-item {
+  margin: 2px;
+  border: 1px solid #553739;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.wraper .main-container .list-container .single-item a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wraper .main-container .list-container .single-item p {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #243E36;
+}
+
+.wraper .main-container .no-results {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #243E36;
+}
+/*# sourceMappingURL=style.css.map */
