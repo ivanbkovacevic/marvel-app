@@ -61,7 +61,7 @@ body {
       -ms-flex-align: start;
           align-items: flex-start;
   height: 2000px;
-  padding-left: 100px;
+  padding: 0 100px;
   overflow: scroll;
 }
 
@@ -78,13 +78,13 @@ body {
           align-items: baseline;
   background-color: #553739;
   color: #d6efff;
-  width: 80%;
+  width: 100%;
   padding: 40px;
 }
 
 .wraper .main-container .search-bar-container label {
   margin: 0 2px;
-  font-size: 2rem;
+  font-size: 1.3rem;
 }
 
 .wraper .main-container .search-bar-container input {
@@ -114,32 +114,60 @@ body {
 }
 
 .wraper .main-container .list-container {
-  padding: 50px;
+  list-style-type: none;
+  width: 100%;
 }
 
 .wraper .main-container .list-container .single-item {
   margin: 2px;
   border: 1px solid #553739;
   border-radius: 5px;
+  width: 100%;
   padding: 10px;
 }
 
 .wraper .main-container .list-container .single-item a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 150px 150px 150px;
+      grid-template-columns: 150px 150px 150px;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+      grid-template-areas: "img title title" "img desc desc" "img desc desc";
+  text-decoration: none;
 }
 
-.wraper .main-container .list-container .single-item p {
+.wraper .main-container .list-container .single-item h3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: title;
   font-size: 2rem;
   font-weight: bold;
   color: #243E36;
+}
+
+.wraper .main-container .list-container .single-item p {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #243E36;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: desc;
+}
+
+.wraper .main-container .list-container .single-item .img-thumbnail {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  grid-area: img;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .wraper .main-container .no-results {

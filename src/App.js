@@ -30,8 +30,8 @@ function App() {
     };
  
     fetchData();
-  }, [render]);
-
+  }, [render,url]);
+console.log(data)
 const searchTerms=(dateFullQueryString,titleQuery)=>{
 
   setUrl(`${base_url}apikey=${PUBLIC_KEY}&ts=${ts}&hash=${hash}${dateFullQueryString}${titleQuery}`);
@@ -53,16 +53,17 @@ const searchTerms=(dateFullQueryString,titleQuery)=>{
 
             data.length>0 ? 
 
-              <div className="list-container">
+              <ul className="list-container">
                 {data.map((item,id) => (
-                  <div className="single-item" key={id}>
+                  <li className="single-item" key={id}>
                     <a href={item.urls[0].url} target="blank"  alt={item.title}>
                     <img className="img-thumbnail" src={img_thumbnail} alt={item.title}></img>
-                    <p>{item.title}</p>
+                    <h3>{item.title}</h3>
+                    <p>{item.description}</p>
                     </a>
-                  </div>
+                  </li>
                 ))}
-               </div>
+               </ul>
                         : <p className="no-results">NO RESULTS FOR THIS SEARCH</p>
              )}
           </div>
