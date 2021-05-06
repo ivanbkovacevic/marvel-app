@@ -28,6 +28,13 @@
             height: 2000px;
             padding:0 250px;
             overflow:scroll;
+            @media only screen and (max-width: 1300px) {
+                padding:150px;
+              }
+
+              @media only screen and (max-width: 1000px) {
+                padding:100px;
+              }
 
             @media only screen and (max-width: 600px) {
                 padding:20px;
